@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Полищук Полина Андреевна — Репетитор по математике</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --accent: #f59e0b;
+            --bg-light: #f8fafc;
+            --text-dark: #0f172a;
+            --text-muted: #475569;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: #ffffff;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .badge {
+            background: rgba(37, 99, 235, 0.2);
+            color: #60a5fa;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s ease;
+        }
+
+        .btn-cta:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            padding: 24px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        /* Services & Directions */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            padding: 28px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .service-card h3 {
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+
+        /* Pricing Section */
+        .pricing-tables {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .price-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 32px;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .price-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+
+        .price-card p.desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+        }
+
+        .price-list {
+            list-style: none;
+            margin-bottom: 24px;
+        }
+
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .price-item:last-child {
+            border-bottom: none;
+        }
+
+        .price-val {
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .price-sub {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            display: block;
+            text-align: right;
+        }
+
+        /* Flags List */
+        .countries-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 16px;
+        }
+
+        .country-chip {
+            background: #e0e7ff;
+            color: #3730a3;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            .container { padding: 40px 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <span class="badge">Онлайн-обучение</span>
+            <h1>Полищук Полина Андреевна</h1>
+            <p class="subtitle">Профессиональный репетитор по математике</p>
+            <a href="#contact" class="btn-cta">Записаться на урок</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Опыт и факты -->
+        <section>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">6+ лет</div>
+                    <div>Опыта успешного преподавания</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">50+</div>
+                    <div>Учеников вошли в топ-700 ВУЗов мира</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div>Индивидуальный подход</div>
+                </div>
+            </div>
+
+            <div style="text-align: center; background: white; padding: 24px; border-radius: 12px; border: 1px solid var(--border);">
+                <strong>География учеников:</strong>
+                <div class="countries-list">
+                    <span class="country-chip">Казахстан</span>
+                    <span class="country-chip">Россия</span>
+                    <span class="country-chip">Корея</span>
+                    <span class="country-chip">Китай</span>
+                    <span class="country-chip">Польша</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Направления подготовки -->
+        <section>
+            <h2>Направления обучения</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Экзамены за рубеж</h3>
+                    <p>Подготовка ко вступительным экзаменам в зарубежные школы и университеты.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Госэкзамены (ЕНТ, ЕГЭ, ОГЭ)</h3>
+                    <p>Системная подготовка к успешной сдаче ЕНТ, ЕГЭ и ОГЭ. Разбор сложных заданий.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Итоговые экзамены</h3>
+                    <p>Подготовка к итоговым аттестациям после 9 и 11 классов.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Школьная программа</h3>
+                    <p>Устранение пробелов в знаниях, повышение успеваемости и опережающее обучение.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Цены -->
+        <section>
+            <h2>Стоимость абонементов</h2>
+            <div class="pricing-tables">
+                
+                <!-- Индивидуальные -->
+                <div class="price-card">
+                    <h3>Индивидуальные уроки</h3>
+                    <p class="desc">Персональная программа и максимум внимания преподавателя.</p>
+                    <ul class="price-list">
+                        <li class="price-item">
+                            <div>1 раз в неделю</div>
+                            <div>
+                                <span class="price-val">20 000 ₸</span>
+                            </div>
+                        </li>
+                        <li class="price-item">
+                            <div>2 раза в неделю</div>
+                            <div>
+                                <span class="price-val">36 000 ₸</span>
+                            </div>
+                        </li>
+                        <li class="price-item">
+                            <div>3 раза в неделю</div>
+                            <div>
+                                <span class="price-val">50 000 ₸</span>
+                            </div>
+                        </li>
+                        <li class="price-item">
+                            <div>4 раза в неделю</div>
+                            <div>
+                                <span class="price-val">65 000 ₸</span>
+                            </div>
+                        </li>
+                        <li class="price-item">
+                            <div>5 раз в неделю</div>
+                            <div>
+                                <span class="price-val">80 000 ₸</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Групповые -->
+                <div class="price-card">
+                    <h3>Групповые уроки</h3>
+                    <p class="desc">Занятия в мини-группах (до 5 человек). Расчет за 8 занятий.</p>
+                    <ul class="price-list">
+                        <li class="price-item">
+                            <div>Группа 2 человека</div>
+                            <div>
+                                <span class="price-val">24 000 ₸ / чел</span>
+                            </div>
+                        </li>
+                        <li class="price-item">
+                            <div>Группа 3 человека</div>
+                            <div>
+                                <span class="price-val">20 000 ₸ / чел</span>
+                            </div>
+                        </li>
+                        <li class="price-item">
+                            <div>Группа 4 человека</div>
+                            <div>
+                                <span class="price-val">16 000 ₸ / чел</span>
+                            </div>
+                        </li>
+                        <li class="price-item">
+                            <div>Группа 5 человек</div>
+                            <div>
+                                <span class="price-val">14 400 ₸ / чел</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Контакты -->
+        <section id="contact" style="text-align: center; background: white; padding: 40px; border-radius: 16px; border: 1px solid var(--border);">
+            <h2>Записаться на занятия</h2>
+            <p style="color: var(--text-muted); margin-bottom: 24px;">Свяжитесь со мной, чтобы обсудить график и подобрать формат обучения.</p>
+            <a href="https://wa.me/79969388784" target="_blank" class="btn-cta" style="background-color: #25D366; margin-right: 10px;">Написать в WhatsApp</a>
+            <a href="https://t.me/lisswen_03" target="_blank" class="btn-cta" style="background-color: #229ED9;">Написать в Telegram</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; Полищук Полина Андреевна — Репетитор по математике.</p>
+    </footer>
+
+</body>
+</html>
